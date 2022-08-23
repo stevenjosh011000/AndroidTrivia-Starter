@@ -1,10 +1,8 @@
 package com.example.android.navigation
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.example.android.navigation.databinding.FragmentTitleBinding
@@ -37,8 +35,14 @@ class TitleFragment : Fragment() {
             view.findNavController().navigate(R.id.action_titleFragment3_to_gameFragment2)
         }
 
-
+        setHasOptionsMenu(true)
         return binding.root
+    }
+
+    override fun OnCreateOptionsMenu(menu: Menu, inflater:MenuInflater):Boolean{
+        super.onCreateOptionsMenu(menu,inflater)
+        inflater.inflate(R.menu.options_menu,menu)
+        return true
     }
 
     companion object {
