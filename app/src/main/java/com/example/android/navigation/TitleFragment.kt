@@ -39,10 +39,9 @@ class TitleFragment : Fragment() {
         return binding.root
     }
 
-    override fun OnCreateOptionsMenu(menu: Menu, inflater:MenuInflater):Boolean{
+    override fun onCreateOptionsMenu(menu: Menu, inflater:MenuInflater){
         super.onCreateOptionsMenu(menu,inflater)
         inflater.inflate(R.menu.options_menu,menu)
-        return true
     }
 
     companion object {
